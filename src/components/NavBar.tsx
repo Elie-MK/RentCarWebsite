@@ -5,6 +5,7 @@ import { CiMenuBurger, CiMenuFries  } from "react-icons/ci";
 import {Colors }from "../../src/utilities/Color.js"
 import Button from "./Button.js";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     const [openMenu, setOpenMenu]=useState(false)
@@ -14,7 +15,9 @@ function NavBar() {
         <div className="flex  items-center justify-between" >
             <div className="flex justify-between items-center md:gap-28">
             <div>
-                    <h1 className=" text-3xl font-bold">RentCar</h1>
+                    <Link to={"/"}>
+                        <h1 className=" text-3xl font-bold">RentCar</h1>
+                    </Link>
                 </div>
               
                 <div className="border pl-2 pr-10 rounded-xl w-[25rem] md:flex hidden">

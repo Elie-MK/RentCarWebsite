@@ -10,6 +10,7 @@ import CardCar from "../components/CardCar";
 import { CarDatas } from "../utilities/CarDatas";
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowLeft,  MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowUp } from "react-icons/md";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 
 interface propsData {
@@ -161,14 +162,18 @@ const HomePage: React.FC<propsData> = ({ Datas }) => {
             <div>
               <div className="md:flex gap-6">
                 {CarDatas.map(
-                  ({ title, type, img, litre, func, place, price }) => (
-                    <CardCar title={title} type={type} img={img} litre={litre} func={func} place={place} price={price} />
+                  ({ title, type, img, litre, func, place, price, id }) => (
+                    <Link to={`/allvehicles/detail/${id}`}>
+                        <CardCar title={title} type={type} img={img} litre={litre} func={func} place={place} price={price} />
+                    </Link>
                   )
                 )}
               </div>
               <div className="flex items-center justify-center  mt-10">
                 <div className="border border-black hover:text-white hover:border-white hover:bg-orange-500 transition ease-in duration-200 cursor-pointer flex items-center justify-center py-2 px-9 rounded-3xl">
-                  <h1>Show All Vehicles</h1>
+                  <Link to={"/allvehicles"}>
+                      <h1>Show All Vehicles</h1>
+                  </Link>
                 </div>
               </div>
             </div>
