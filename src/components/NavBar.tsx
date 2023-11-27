@@ -22,7 +22,7 @@ function NavBar() {
                         <CiSearch size={30} color={Colors.gray}  />
                         <input className="p-2 pl-2 outline-none mr-20  placeholder:text-gray-400" placeholder="Search something here" />
                         <div className="-mr-5 cursor-pointer">
-                        <IoOptionsOutline size={30} color={Colors.gray} />
+                            <IoOptionsOutline size={30} color={Colors.gray} />
                         </div>
                     </div>
                 </div>
